@@ -35,10 +35,6 @@ for i in iterate_bucket_items(bucket='imagevessel'):
     print('Detected labels for ' + fileName)    
     for label in response['Labels']:
         key = label['Name']
-        if key in top5Common:
-            top5Common[key] += 1
-        else:
-            top5Common[key] = 1
         setOfSubjects.add(key)
         
       #  print (label['Name'] + ' : ' + str(label['Confidence']))
